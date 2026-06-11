@@ -24,15 +24,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
           cache-dependency-path: projects/package-lock.json
 
       - name: Install dependencies
-        run: cd projects && npm ci
+        run: cd projects && npm install
 
       - name: Build
-        run: cd projects && npm run build:static
+        run: cd projects && npx next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
