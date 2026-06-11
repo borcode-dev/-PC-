@@ -423,7 +423,7 @@ export default function BusinessLedgerPage() {
     } else {
       const newId = String(Date.now());
       setInboundData((prev) => [
-        { id: newId, ...(values as InboundRecord) },
+        { ...(values as InboundRecord), id: newId },
         ...prev,
       ]);
       toast.success("入库记录已新增");
@@ -480,7 +480,7 @@ export default function BusinessLedgerPage() {
     } else {
       const newId = String(Date.now());
       setOutboundData((prev) => [
-        { id: newId, ...(values as OutboundRecord) },
+        { ...(values as OutboundRecord), id: newId },
         ...prev,
       ]);
       toast.success("出库记录已新增");

@@ -588,7 +588,7 @@ export default function EntitiesPage() {
   const handleExport = () => {
     if (activeTab === "production") {
       exportToCSV(
-        filteredProduction,
+        filteredProduction as unknown as Record<string, unknown>[],
         [
           { key: "name", label: "企业名称" },
           { key: "creditCode", label: "统一社会信用代码" },

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "bash ./scripts/build.sh",
+    "build:static": "next build",
     "dev": "bash ./scripts/dev.sh",
     "_preinstall": "npx only-allow pnpm",
     "lint": "eslint",
